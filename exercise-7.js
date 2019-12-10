@@ -1,11 +1,8 @@
 function hapusSimbol(str) {
     var temp = ''
-    var simbol = 'abcdefghijklmnopqrstuvwxyz1234567890'
     for (let i = 0; i < str.length; i++) {
-        for (let j = 0; j < simbol.length; j++) {
-            if (str[i] == simbol[j]){
-                temp += str[i]
-            }
+        if (/[A-Z]/.test(str[i]) == true || /[a-z]/.test(str[i]) == true || /[0-9]/.test(str[i]) == true) {
+            temp += str[i]
         }
     }
     return temp
